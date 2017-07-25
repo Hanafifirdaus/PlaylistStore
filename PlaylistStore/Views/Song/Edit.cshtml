@@ -1,0 +1,35 @@
+﻿@model PlaylistStore.Models.SongModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+
+    @Html.DisplayNameFor(Model => Model.Title)
+    <div>
+        @Html.TextBoxFor(model => Model.Title)
+    </div>
+    @Html.DisplayNameFor(Model => Model.Singer)
+    <div>
+        @Html.TextBoxFor(model => Model.Singer)
+    </div>
+    @Html.DisplayNameFor(Model => Model.Year)
+    <div>
+        @Html.TextBoxFor(model => Model.Year)
+    </div>
+    @Html.DisplayNameFor(Model => Model.Writer)
+    <div>
+        @Html.TextBoxFor(model => Model.Writer)
+    </div>
+    <div>
+        @Html.DropDownListFor(model => Model.GenreId, Model.Genres)
+    </div>
+    <div>
+        <br />
+        <input type="submit" value="Submit" />
+    </div>
+}

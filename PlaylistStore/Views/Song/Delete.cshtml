@@ -1,0 +1,13 @@
+﻿@model PlaylistStore.Models.SongModel
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+Yakin Delete
+@using (Html.BeginForm())
+{
+    @Html.DisplayFor(model => Model.Title)
+    <input type="submit" value="delete"/>
+}
